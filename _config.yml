@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
+title: GAVIN's Blog
+subtitle: TECH CORNER
+description: This is my personal blog to wirte some notes and blogs and share with friends
+author: Li Gaozhao
+language: English and Chinese
 timezone:
 
 # URL
@@ -68,4 +68,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/GavinLee1/Blog.git
+  branch: master
