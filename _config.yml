@@ -7,7 +7,7 @@ title: GAVIN's Blog
 subtitle: TECH CORNER
 description: This is my personal blog to wirte some notes and blogs and share with friends
 author: Li Gaozhao
-language: English and Chinese
+language: zh-Hans
 timezone:
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: Yelee
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
