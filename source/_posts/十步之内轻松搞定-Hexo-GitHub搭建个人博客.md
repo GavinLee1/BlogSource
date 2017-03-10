@@ -8,7 +8,7 @@ tags: [Git,GitHub,GiHub Pages,Hexo,Blog,.md,Markdown,Hexo主题,Hexo配置,Hexo�
 
 <!-- more -->  
 *** 
-### 包含的所有技术关键词 以及 简单介绍  
+## 包含的所有技术关键词 以及 简单介绍  
 **[Git](https://git-scm.com/)**: 其实说白了就是帮你管理代码，进行版本控制。让你life easier的东西。官网是这么介绍自己的:  
 > Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  
   
@@ -27,58 +27,58 @@ tags: [Git,GitHub,GiHub Pages,Hexo,Blog,.md,Markdown,Hexo主题,Hexo配置,Hexo�
 画个分界线  - 教程正式开始  
 ***  
   
-## 1. 如果你用MacOS, 请先安装一下 brew  
+## 如果你用MacOS, 请先安装一下 brew [1]  
 ```bash  
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"    
 ``` 
-## 2. 安装 Git  
+## 安装 Git [2]  
 ```bash  
 brew install git  
 ```  
 Windows下安装配置Git请参考: [Win7上Git安装及简单配置过程](https://my.oschina.net/u/998304/blog/353386)  
   
-## 3. 注册GitHub 获取并上传本机SSH 新建一个代码库  
-##### 3.1 注册GitHub
+## 注册GitHub 获取并上传本机SSH 新建一个代码库 [3]  
+### 注册GitHub [3.1]
 ---  
 [登录官网](https://github.com)，一步一步往下点就行了  
 {% asset_img 1Github.png 注册GitHub%}  
   
-##### 3.2 获取并上传本机SSH
+### 获取并上传本机SSH [3.2]
 ---  
 关于这一步, GitHub上面有很清晰的指导   -> [链接地址](https://help.github.com/articles/connecting-to-github-with-ssh/)  
 为了本文的完整性，我截几个图放这里:  
-**3.2.1 首先查看自己电脑里是否已经有了SSH key, 如果有了直接上传就行**  
+#### 首先查看自己电脑里是否已经有了SSH key, 如果有了直接上传就行[3.2.1]
 ```bash  
 ls -al ~/.ssh  
 ```  
-**3.2.2 如果还没有, 你需要执行以下几步**  
+#### 如果还没有, 你需要执行以下几步 [3.2.2]
 {% asset_img 3.2.2.1GenerateSsh.png Generate SSH%}  
 {% asset_img 3.2.2.2AddAgent.png Add SSH-Agent%}  
-**3.2.3 上一步成功之后**  
+#### 上一步成功之后 [3.2.3]
 去你的本地找到以下文件，拷贝里面的内容 **注意不要前后空格**  
 {% asset_img 3.2.3.1LocalSSH.png Local SSH%}  
 然后回到, GitHub, 到以下页面进行添加  
 {% asset_img 3.2.3.2.png 添加SSH%}  
 {% asset_img 3.2.3.3.png 添加SSH%}  
   
-##### 3.3 新建一个代码库  - 这个略关键  
+### 新建一个代码库  - 这个略关键 [3.3]  
 ---  
 首先，GitHub有个功能叫 **GitHub Pages**。这个也是本教程的**关键**。你可以使用GitHub Pages直接从代码库生成个人站点，运行之后，直接通过GitHub提供的域名（用户名+github+io)进行访问。但是，为了使用这个功能，我们必须符合他们的规范: 新建Repository时, name 对应处填写资源名，需要使用自己的用户名，**每个用户名下面只能建立一个**，资源命名 **必须符合这样的规则username/username.github.io**  
 
-**3.3.1 首页选择新建Repository**  
+#### 首页选择新建Repository [3.3.1]
  
 {% asset_img 3.3.1.png 新建Repository%}  
-**3.3.2 项目名称设置为 yourname.github.io 并clone到本地**  
+#### 项目名称设置为 yourname.github.io 并clone到本地 [3.3.2]
   
 {% asset_img 3.3.2.png yourname.github.io%}  
-**3.3.3 项目创建成功之后，去项目页面，点击settings**  
+#### 项目创建成功之后，去项目页面，点击settings [3.3.3]
   
 **页面往下拉，找到 GitHub Pages 分支选择master 并保存**
 **大概过10分钟左右，你的页面就可以直接通过yourname.github.io进行访问了**  
 {% asset_img 3.3.3.png 新建Repository%}  
 {% asset_img 3.3.4.png 新建Repository%}   
 
-## 4. 重点来了 - 安装 Hexo
+## 重点来了 - 安装 Hexo [4]
 开始之前, 请确保你的本机成功正确的安装了Node。  
 如果没有, 如果你用Mac, 同样一键傻瓜式安装:  
 ```bash    
@@ -90,7 +90,7 @@ Windows 同样请参考  ->  [Node.js 安装配置](http://www.runoob.com/nodejs
 ```bash  
 $ npm install hexo-cli -g  
 ```  
-## 5. 继续划重点 - 初始化 Hexo  
+## 继续划重点 - 初始化 Hexo [5]  
 先建个文件夹  
 ```bash  
 mkdir HelloBlog  
@@ -116,7 +116,7 @@ hexo server    或者是  hexo s
   
 你就会发现, 本地的Blog已经跑起来了...  
 {% asset_img 5run.png 效果%}  
-## 6. 重点中的重点 - 修改配置文件并部署到GitHub  
+## 重点中的重点 - 修改配置文件并部署到GitHub [6]  
 首先来看一下, 初始化项目的目录结构长什么样子...  
 {% asset_img 6.1.png 目录结构%}  
 我们需要修改的就是根目录下的这个 **_config.yml** 顺嘴提一句, 博客的原始文件会存在source/_posts/ 下面  
@@ -137,18 +137,18 @@ hexo deploy		或者		hexo d
 如果一切顺利的话, 就可以成功部署到GitHub上了  
 {% asset_img 6.4.png Deploy信息%}   
 等几分钟就可以通过 -> [gavinlee1.github.io](gavinlee1.github.io) 进行访问了  
-## 7.你感兴趣的 - 关于主题的事情  
+## 你感兴趣的 - 关于主题的事情 [7]  
 Hexo有很多开源的主题和插件可以添加配置。以本博客为例, 我用的主题叫 [Yelee](https://github.com/MOxFIVE/hexo-theme-yelee) 可以在github上找到源码和对应的wiki介绍。  
 添加个人主题, 主要有这么几步:  
-##### 7.1 在 theme 目录下 git clone 你想要的主题  
+### 在 theme 目录下 git clone 你想要的主题 [7.1]  
 {% asset_img 7.1.png Deploy信息%}  
-##### 7.2 修改全局配置文件 (/_config.yml) - 替换主题  
+### 修改全局配置文件 (/_config.yml) - 替换主题 [7.2]  
 {% asset_img 7.2.png Deploy信息%}  
-##### 7.3 配置和定制主题的显示内容  
+### 配置和定制主题的显示内容 [7.3]  
 你可以在 [https://hexo.io/themes/](https://hexo.io/themes/) 这里找到你想要的主题。但是不同主题有自己的配置信息结构和修改方法, 具体需要参考你所选主题在GitHub上的wiki。当然, 万变不离其宗的是修改**主题目录下的(_config.yml)**  
   
 以我用的主题为例 [Yelee 主题使用说明 [简中] ](http://moxfive.coding.me/yelee/)  官方提供完整的配置使用说明书。你可以参考该说明, 修改配置文件, 字体, 高亮格式 以及 包括分享 评论 在内的各种插件。  
-## 8.怎么写博客？  
+## 怎么写博客？ [8]  
 执行命令:  
 ```bash  
 hexo new post "This is the tile for new post."  
@@ -157,7 +157,7 @@ hexo new post "This is the tile for new post."
 ```bash  
 hexo clean && hexo generate && hexo deploy  
 ```  
-# 还等什么？ 赶快搭建你自己的Blog咯
+## 还等什么？ 赶快搭建你自己的Blog咯
 
  
   

@@ -5,10 +5,13 @@
 # Site
 title: GAVIN's Blog
 subtitle: TECH CORNER
-description: This is my personal blog to wirte some notes and blogs and share with friends
-author: Li Gaozhao
+description: 你若盛开 清风自来
+author: 【五行僧】
 language: zh-Hans
 timezone:
+avatar: /img/avatar-02-21.png  
+sitemap:
+path: baidusitemap.xml
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -22,7 +25,7 @@ source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
-category_dir: categories
+category_dir: category
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
@@ -63,7 +66,32 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Yelee
+theme: next
+
+# Below is for next theme
+baidu_analytics: 3a444c547f2eafcc651f97973114550e
+google_analytics: UA-92404866-1
+
+algolia:
+  applicationID: 'EWAM3Y8D50'
+  apiKey: '32ac3dfe3600824d7d8353bf46b0e9fc'
+  adminApiKey: 'e8717e746a1d4cd8be60d4bbf1be222c'
+  indexName: 'github.io'
+  chunkSize: 5000
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# 分享服务
+jiathis: true
+# 百度分享服务
+baidushare: true
+# 多说分享服务
+duoshuo_share: true
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
